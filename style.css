@@ -1,0 +1,40 @@
+body{
+    text-align:center;
+}
+#RightWheel,#LeftWheel{
+    animation: rotatemyWheel 2s linear infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+#Biker{
+    animation: biking 3s linear infinite alternate;
+    transform-origin:bottom;
+}
+#Background{
+    animation: rotatebackground 2s linear infinite alternate;
+    transform-origin: center;
+}
+@keyframes rotatemyWheel{
+    from{
+    transform: rotate(0deg);
+    }
+    to{
+    transform: rotate(360deg) ;
+    }
+}
+@keyframes rotatebackground{
+    from{
+    transform: rotate(0deg);
+    }
+    to{
+    transform: rotate(45deg) ;
+    }
+}
+@keyframes biking{
+    from{
+        transform:translateY(-20px)
+    }
+    to{
+        transform:translateY(20px);
+    }
+}
